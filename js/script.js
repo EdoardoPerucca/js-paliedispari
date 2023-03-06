@@ -41,3 +41,45 @@ function palindroma(str){
 }
 
 });
+
+
+// --------------- Lancio dadi ----------------------------
+
+
+
+function lancia() {
+  let pcNumero1El = Math.floor(Math.random() * 5 + 1);
+   
+  document.getElementById("pc-dado1").innerHTML ="Il computer ha totalizzato " + pcNumero1El;
+  
+  let pctotaleEl = pcNumero1El;
+  
+  
+  
+
+  let utenteNumero1El = Math.floor(Math.random() * 5 + 1);
+    
+  document.getElementById("utente-dado1").innerHTML ="Tu hai ottenuto " + utenteNumero1El; 
+ 
+  let utenteTotaleEl= utenteNumero1El;
+  
+
+  
+  
+  sommaEl = (pcNumero1El + utenteNumero1El);
+
+  if (sommaEl % 2 == 0) {
+    document.getElementById('somma').innerHTML = 'La somma è pari';
+  } else {
+    document.getElementById('somma').innerHTML = 'La somma è dispari';
+  }
+
+
+  if(utenteTotaleEl > pctotaleEl) {
+    document.getElementById("vinto").innerHTML = "hai vinto!";
+
+  } else {
+    document.getElementById("vinto").innerHTML = "Mi dispiace, hai perso";
+
+  }
+}
